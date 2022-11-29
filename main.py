@@ -164,3 +164,78 @@
 # s2 = input()
 # print(s1.count(s2) or s2.count(s1))
 
+# 20. Задайте список. Напишите программу, которая определит, присутствует ли в заданном списке строк некое число.
+# ввести кол-во строк, потом строки. Строки должны записаться в текстовый файл.
+# После вводим число, если есть число в файле, то написать ДА
+
+# a = int(input('Ввод числа '))
+#
+# with open('file.txt', 'w', encoding='utf-8') as file:
+#     for _ in range(a):
+#         file.write(input() + '\n')
+#
+# c = input('Введите искомое ')
+#
+# with open('file.txt', 'r', encoding='utf-8') as file:
+#     strings = file.read().splitlines()
+#
+#     count = 0
+#     b = False
+#     for line in strings:
+#         count += 1
+#         if c in line:
+#             b = True
+#             print(f'DA ->  {count}')
+#
+#     if not b:
+#         print('NET')
+
+# 21. Напишите программу, которая определит позицию второго вхождения строки в списке либо сообщит, что ее нет
+# Пример:
+# список: ['qwe', 'asd', 'zxc', 'qwe', 'ertqwe'], ищем 'qwe', ответ: 3
+# список: ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"], ищем: "йцу", ответ: 5
+# список: ["йцу", "фыв", "ячс", "цук", "йцукен"], ищем: "йцу", ответ: -1
+# список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
+# список: [], ищем: "123", ответ: -1
+
+# some_list = ["123", "234", 123, "567"]
+# print(some_list)
+#
+# a = input('Введите искомое ')
+#
+# count = 0
+# count2 = 0
+# b = False
+# for line in some_list:
+#     count += 1
+#     if a == line:
+#         count2 += 1
+#         if count2 == 2:
+#             b = True
+#             print(f'{count - 1}  ')
+#             break
+# if not b:
+#     print('-1')
+
+# Напишите функцию, которая принимает номер месяца и язык (русский или английский), а возвращает его название.
+# Ввод:
+# print(month_name(3, "en"))
+# March
+# Ввод
+# print(month_name(3, "ru"))
+# март
+
+# def mounth(x, y):
+#     listEn = ('January', 'February', 'March', 'April', 'May', 'June',
+#               'July', 'August', 'September', 'October', 'November', 'December')
+#     listRu = ('январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+#               'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь')
+#     if x > 0 and x < 13:
+#         if y == 'en':
+#             return listEn[x - 1]
+#
+#         if y == 'ru':
+#             return listRu[x - 1]
+#
+#
+# print(mounth(5, 'ru'))
