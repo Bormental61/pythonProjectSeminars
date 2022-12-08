@@ -276,11 +276,16 @@
 # print('Корней нет')
 
 # var2 Python
-import sympy
-a = float(input())
-b = float(input())
-c = float(input())
-x = sympy.Symbol('x')
-print(sympy.solve(a * x ** 2 + b * x + c))
+# import sympy
+# a = float(input())
+# b = float(input())
+# c = float(input())
+# x = sympy.Symbol('x')
+# print(sympy.solve(a * x ** 2 + b * x + c))
 
 # 29. Задайте два числа. Напишите программу, которая найдет НОК (наименьшее общее кратное) этих двух чисел.
+
+# import sympy
+# a = int(input())
+# b = int(input())
+# print(sympy.lcm(a, b))
