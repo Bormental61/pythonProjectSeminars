@@ -225,7 +225,7 @@
 # print(month_name(3, "ru"))
 # март
 
-# def mounth(x, y):
+# def month(x, y):
 #     listEn = ('January', 'February', 'March', 'April', 'May', 'June',
 #               'July', 'August', 'September', 'October', 'November', 'December')
 #     listRu = ('январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
@@ -238,4 +238,49 @@
 #             return listRu[x - 1]
 #
 #
-# print(mounth(5, 'ru'))
+# print(month(5, 'ru'))
+
+# 27. Задайте строку из набора чисел. Напишите программу, которая покажет большее и меньшее число.
+# В качестве символа-разделителя используйте пробел.
+
+# var 1
+# some_str = input()
+# int_list = list(map(int, some_str.split()))
+# print(max(int_list))
+# print(min(int_list))
+
+# var 2
+# text = str(input("Enter a number: "))
+# arr = [int(n) for n in text.split()]
+# print(arr)
+
+# 28. Найдите корни квадратного уравнения Ax2 + Bx + C = 0 двумя способами:
+#   1) c помощью математических формул нахождения корней квадратного уравнения
+#   2) с помощью дополнительных библиотек Python
+
+# var1 algorithm
+# import math
+# a = float(input('a = '))
+# b = float(input('b = '))
+# c = float(input('c = '))
+# discr = pow(b, 2) - 4 * a * c
+# print(f'Дискриминант = {discr}')
+# if discr > 0:
+# x1 = (-b + math.sqrt(discr)) / (2 * a)
+# x2 = (-b - math.sqrt(discr)) / (2 * a)
+# print(f'x1 = {x1} \nx2 = {x2}')
+# elif discr == 0:
+# x = -b / (2 * a)
+# print(f'x = {x}')
+# else:
+# print('Корней нет')
+
+# var2 Python
+import sympy
+a = float(input())
+b = float(input())
+c = float(input())
+x = sympy.Symbol('x')
+print(sympy.solve(a * x ** 2 + b * x + c))
+
+# 29. Задайте два числа. Напишите программу, которая найдет НОК (наименьшее общее кратное) этих двух чисел.
