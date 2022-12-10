@@ -289,3 +289,80 @@
 # a = int(input())
 # b = int(input())
 # print(sympy.lcm(a, b))
+
+# Seminar 5
+# some_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# print(list(filter(lambda i: i % 2 == 0, some_list)))
+
+# some_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# new_list = list(map(lambda i: i ** 2, some_list))
+# print(new_list)
+
+# number_list = [1, 2, 3, 4, 5]
+# str_list = ['one', 'two', 'three', 'for', 'five']
+# translate_list = {}
+# for i, j in zip(str_list, number_list):
+#     translate_list[j] = i
+# print(translate_list)
+
+# some_list = [8, 9, 10, 0, 12]
+# print(list(enumerate(some_list)))
+
+# some_list = [i ** 2 for i in range(1, 101) if not i % 2]
+# print(some_list)
+
+# print(list(i ** 2 for i in range(1, 101) if not i % 2))
+
+# 35. В файле находится N натуральных чисел, записанных через пробел.
+# Среди чисел не хватает одного, чтобы выполнялось условие A[i] - 1 = A[i-1]. Найдите это число.
+
+# with open('twofile.txt', 'r') as file:
+#     some_str = file.readline()
+# some_list = list(map(int, some_str.split()))
+# print(some_list)
+# for i in range(1, len(some_list)):
+#     if some_list[i] - 1 != some_list[i - 1]:
+#         print(some_list[i] - 1)
+
+# 38. Напишите программу, удаляющую из текста все слова, содержащие "абв".
+
+# my_text = 'авб фпл роп шгенв борн ылвор жщш'
+# my_text_list = list(filter(lambda i: 'а' and 'б' and 'в' not in i, my_text.split()))
+# print(my_text_list)
+
+# Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
+# Входные и выходные данные хранятся в отдельных текстовых файлах.
+
+# def compress(path):
+#     txt = ''
+#     count = 1
+#     for i in range(1, len(path)):
+#         if path[i - 1] == path[i]:
+#             count += 1
+#             if i == len(path) - 1:
+#                 txt += str(count) + path[i - 1]
+#         else:
+#             txt += str(count) + path[i]
+#             count = 1
+#     return txt
+# print(compress('AAAABB'))
+
+import random
+K = int(input('Введите степень... '))
+diff = 0
+for i in range(K):
+    S = int(random.randint(0, 10))
+    print(S)
+    if S != 0:
+        diff = diff + S**K
+        print(diff)
+        print(f'{S}^{K}({S**K}) + ', end='')
+        K = K - 1
+
+S = int(random.randint(0, 10))
+if S != 0:
+    print(S, end=' = ')
+    print(diff + S)
+else:
+    print(end=' = ')
+    print(diff)
