@@ -347,22 +347,47 @@
 #     return txt
 # print(compress('AAAABB'))
 
-import random
-K = int(input('Введите степень... '))
-diff = 0
-for i in range(K):
-    S = int(random.randint(0, 10))
-    print(S)
-    if S != 0:
-        diff = diff + S**K
-        print(diff)
-        print(f'{S}^{K}({S**K}) + ', end='')
-        K = K - 1
+# import random
+# K = int(input('Введите степень... '))
+# diff = 0
+# for i in range(K):
+#     S = int(random.randint(0, 10))
+#     print(S)
+#     if S != 0:
+#         diff = diff + S**K
+#         print(diff)
+#         print(f'{S}^{K}({S**K}) + ', end='')
+#         K = K - 1
+#
+# S = int(random.randint(0, 10))
+# if S != 0:
+#     print(S, end=' = ')
+#     print(diff + S)
+# else:
+#     print(end=' = ')
+#     print(diff)
 
-S = int(random.randint(0, 10))
-if S != 0:
-    print(S, end=' = ')
-    print(diff + S)
-else:
-    print(end=' = ')
-    print(diff)
+# Sample Input
+# ["eat", "tea", "tan", "ate", "nat", "bat"]
+# Sample Output
+# [ ["ate", "eat", "tea"], ["nat", "tan"], ["bat"] ]
+# Т.е. сгруппировать слова по "общим буквам".
+
+# some_list = ['eat', 'rot', 'tea', 'tan', 'ate', 'nat', 'bat', 'tor']
+#
+# new_list = []
+# temp_list = []
+# words = []
+# for i in range(len(some_list)):
+#     if some_list[i] in new_list:
+#         continue
+#     else:
+#         for j in range(len(some_list)):
+#             if sorted(some_list[i]) == sorted(some_list[j]):
+#                 new_list.append(some_list[j])
+#                 temp_list.append((some_list[j]))
+#         else:
+#             words.append(temp_list)
+#             temp_list = []
+# print(words)
+# exit()
